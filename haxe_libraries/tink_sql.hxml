@@ -1,0 +1,8 @@
+-D tink_sql=0.0.0-alpha.0
+# @install: lix --silent download "git:git@github.com:haxetink/tink_sql.git#fdbbdfc00e2d0a7ea911a0c667cfd38213957de3" into tink_sql/0.0.0-alpha.0/git/804d2a9f24a3df7369d109c7d68274f73ad726a8
+-lib tink_streams
+-lib tink_macro
+-lib tink_json
+-lib tink_url
+-lib geojson
+-cp ${HAXE_LIBCACHE}/tink_sql/0.0.0-alpha.0/git/804d2a9f24a3df7369d109c7d68274f73ad726a8/src

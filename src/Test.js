@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './com/logo.svg';
+import './App.sass';
 
-class App extends Component {
+class Test extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="Test">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Edit <code>src/App.js</code> lack
           </p>
           <a
             className="App-link"
@@ -25,4 +25,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Test;

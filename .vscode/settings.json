@@ -1,0 +1,4 @@
+{
+  "haxe.displayConfigurations": [["frontend.hxml"]],
+  "haxe.executable": "haxe"
+}
