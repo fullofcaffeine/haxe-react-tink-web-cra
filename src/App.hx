@@ -1,3 +1,4 @@
+import pages.homeHX.Page;
 import js.Browser;
 import react.ReactMacro.jsx;
 import Webpack.*;
@@ -5,6 +6,7 @@ import Webpack.*;
 class App {
     static var STYLES = require('./App.sass');
     static var ROBOTO = require('typeface-roboto');
+    static var TEST = load(Page);
 
     static public function main() {
         new App();

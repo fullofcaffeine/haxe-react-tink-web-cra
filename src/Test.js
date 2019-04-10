@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import logo from './com/logo.svg';
+import logo from './logo.svg';
 import './App.sass';
+import Foo from 'pages_homeHX_Page'
+
+alert(Foo);
 
 class Test extends Component {
   render() {

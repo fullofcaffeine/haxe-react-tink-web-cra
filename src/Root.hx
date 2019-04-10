@@ -17,8 +17,8 @@ class Root extends react.ReactComponentOfState<RootState> {
     override function componentDidMount() {
 		switch (state.route) {
 			default:
-				Webpack.load(HomeHX).then(function(_) {
-					setState(cast { component: HomeHX });
+				Webpack.load(Test).then(function(_) {
+					setState(cast { component: Test });
 				});
 		}
     }
