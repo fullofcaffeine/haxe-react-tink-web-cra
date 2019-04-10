@@ -26,24 +26,18 @@ var React_Component = require("react").Component;
 var Root = function() {
 	React_Component.call(this);
 	this.state = { route : ""};
-	var noice = import(/* webpackChunkName: "Test" */ "!haxe-loader?null/Test!").then(function(exports) {
-		Test = $s.Test;
-		var _ = Test;
-		return exports;
-	});
-	console.log("src/Root.hx:16:",noice);
 };
 Root.__super__ = React_Component;
 Root.prototype = $extend(React_Component.prototype,{
 	componentDidMount: function() {
 		var _gthis = this;
 		var _g = this.state.route;
-		import(/* webpackChunkName: "com_Foo" */ "!haxe-loader?null/com_Foo!").then(function(exports) {
-			com_Foo = $s.com_Foo;
-			var _ = com_Foo;
+		import(/* webpackChunkName: "pages_homeHX_Page" */ "!haxe-loader?null/pages_homeHX_Page!").then(function(exports) {
+			pages_homeHX_Page = $s.pages_homeHX_Page;
+			var _ = pages_homeHX_Page;
 			return exports;
 		}).then(function(_1) {
-			_gthis.setState({ component : com_Foo});
+			_gthis.setState({ component : pages_homeHX_Page});
 		});
 	}
 	,render: function() {
@@ -57,19 +51,20 @@ Root.prototype = $extend(React_Component.prototype,{
 		}
 	}
 });
-var Test = require("Test");
 var Webpack = function() { };
-var com_Foo = function(props,context) {
+var pages_homeHX_Button = require("@material-ui/core").Button;
+var pages_homeHX_Page = function(props,context) {
 	React_Component.call(this,props,context);
 };
-com_Foo.__super__ = React_Component;
-com_Foo.prototype = $extend(React_Component.prototype,{
+pages_homeHX_Page.__super__ = React_Component;
+pages_homeHX_Page.prototype = $extend(React_Component.prototype,{
 	render: function() {
-		return { $$typeof : $$tre, type : "div", props : { className : "foo", children : [{ $$typeof : $$tre, type : "img", props : { src : com_Foo.IMG}, key : null, ref : null}," ",com_Foo.CONFIG.hello,"!",{ $$typeof : $$tre, type : "hr", props : { }, key : null, ref : null},"Let's do some HRM guys",{ $$typeof : $$tre, type : "br", props : { }, key : null, ref : null}]}, key : null, ref : null};
+		return React.createElement(pages_homeHX_Button,{ variant : "", color : "primary"},"Hello World!");
 	}
 });
 var react_Partial = function() { };
 var react_PartialMacro = function() { };
+var React = require("react");
 var ReactDOM = require("react-dom");
 var react_ReactMacro = function() { };
 var react__$ReactRef_ReactRef_$Impl_$ = {};
@@ -78,10 +73,9 @@ react__$ReactRef_ReactRef_$Impl_$.get_current = function(this1) {
 };
 var $$tre = (typeof Symbol === "function" && Symbol.for && Symbol.for("react.element")) || 0xeac7;
 App.STYLES = require("./src/App.sass");
+App.ROBOTO = require("typeface-roboto");
 Root.displayName = "Root";
-com_Foo.STYLES = require("./src/com/Foo.css");
-com_Foo.IMG = require("./src/com/logo.svg");
-com_Foo.CONFIG = require("./src/config.json");
-com_Foo.displayName = "Foo";
+pages_homeHX_Page.STYLES = require("./src/pages/homeHX/Foo.css");
+pages_homeHX_Page.displayName = "Page";
 App.main();
 })();

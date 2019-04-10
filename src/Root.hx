@@ -1,4 +1,5 @@
-import com.Foo;
+import pages.homeTS.Page as HomeTS;
+import pages.homeHX.Page as HomeHX;
 import react.ReactMacro.jsx;
 import react.ReactComponent;
 
@@ -8,7 +9,6 @@ typedef RootState = {
 }
 
 class Root extends react.ReactComponentOfState<RootState> {
-
     public function new() {
         super();
         state = { route:'' };
@@ -17,8 +17,8 @@ class Root extends react.ReactComponentOfState<RootState> {
     override function componentDidMount() {
 		switch (state.route) {
 			default:
-				Webpack.load(Test).then(function(_) {
-					setState(cast { component: Test });
+				Webpack.load(HomeHX).then(function(_) {
+					setState(cast { component: HomeHX });
 				});
 		}
     }
